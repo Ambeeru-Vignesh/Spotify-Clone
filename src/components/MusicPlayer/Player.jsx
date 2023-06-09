@@ -21,8 +21,6 @@ const Player = ({
     }
   }
 
-  console.log(activeSong);
-
   useEffect(() => {
     ref.current.volume = volume;
   }, [volume]);

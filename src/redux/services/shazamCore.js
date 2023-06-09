@@ -23,7 +23,14 @@ export const shazamCoreApi = createApi({
         },
       }),
     }),
+    getSongDetails: builder.query({
+      query: ({ songid }) => ({
+        url: "/songs/get-details",
+        method: "POST",
+        body: { songid },
+      }),
+    }),
   }),
 });
 
-export const { useGetTopChartsQuery } = shazamCoreApi;
+export const { useGetTopChartsQuery, useGetSongDetailsQuery } = shazamCoreApi;
