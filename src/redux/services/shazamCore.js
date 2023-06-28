@@ -25,8 +25,8 @@ export const shazamCoreApi = createApi({
     }),
     getSongDetails: builder.query({
       query: ({ songid }) => ({
-        url: "/songs/get-details",
-        method: "POST",
+        url: `/songs/get-details?song_id=${songid}`,
+        method: "GET",
         body: { songid },
       }),
     }),
